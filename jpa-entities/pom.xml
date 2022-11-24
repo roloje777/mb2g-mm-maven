@@ -15,6 +15,10 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--
+           had to make changes below so javax.persistence would work
+           see blog  https://stackoverflow.com/questions/15598210/the-import-javax-persistence-cannot-be-resolved
+        -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
