@@ -13,17 +13,25 @@
     <artifactId>jpa-entities</artifactId>
 
     <packaging>jar</packaging>
-
+    <!--
+              had to make changes below so javax.persistence would work
+              see blog  https://stackoverflow.com/questions/15598210/the-import-javax-persistence-cannot-be-resolved
+           -->
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.0.Final</version>
+            <version>6.1.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.0.Final</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
